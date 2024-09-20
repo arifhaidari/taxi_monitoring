@@ -56,3 +56,23 @@ services:
     # restart: always
     depends_on:
       - database
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: backend_image
+    container_name: backend_container
+    volumes:
+      # - ./data:/app/backend_artifacts  # Mount the data directory
+      - ./app:/app  # Mounting the entire /app directory to the host machine
+    depends_on:
+      - database
+      - grafana
+    ports:
+      - "8000:8000"
+    networks:
+      - back-tier
+    environment:
+      - DATABASE_URL=postgres://postgres:example@database:5432/postgres
+    # restart: always

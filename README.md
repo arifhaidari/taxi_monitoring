@@ -30,3 +30,20 @@ Use Case
 This setup is ideal for scenarios where you need: 1. Persistent data storage (Postgres) 2. Easy database management (Adminer) 3. Advanced data visualization and monitoring (Grafana)
 
 By combining these services, you create a powerful monitoring system that can track, analyze, and visualize your application's performance and data in real-time.
+
+---
+
+├── taxi_monitoring
+│ ├── data
+│ │ ├── green_tripdata_2022-01.parquet
+│ │ └── green_tripdata_2022-02.parquet
+│ ├── docker-compose.yaml
+│ ├── requirements.txt
+│ └── src
+│ ├── download_data.py
+│ └── load_and_preprocess_data.py
+
+---
+
+License:
+this project is developed under the supervision of DataScientest Bootcamp
