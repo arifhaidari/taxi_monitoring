@@ -64,8 +64,10 @@ services:
     image: backend_image
     container_name: backend_container
     volumes:
-      # - ./data:/app/backend_artifacts  # Mount the data directory
-      - ./app:/app  # Mounting the entire /app directory to the host machine
+      # - ./data:/app/backend_artifacts  # Mount the data directory (it does not show the directory - 
+      # in the host machine but inside the docker)
+      - ./:/app
+      # - ./app:/app  # Mounting the entire /app directory to the host machine
     depends_on:
       - database
       - grafana
