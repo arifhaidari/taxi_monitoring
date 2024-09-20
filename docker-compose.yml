@@ -17,7 +17,7 @@ services:
     # Specifies the Docker image to use for this service
     image: postgres
     # Ensures that the service is always restarted if it stops
-    restart: always
+    # restart: always
     # Sets environment variables for the service
     environment:
       # Sets the password for the Postgres database
@@ -31,12 +31,14 @@ services:
   # Defines a service named adminer
   adminer:
     image: adminer
-    restart: always
+    # restart: always
     ports:
       - "8080:8080"
     networks:
       - back-tier
       - front-tier  
+    depends_on:
+      - database
   # Defines a service named grafana
   grafana:
     image: grafana/grafana
@@ -51,4 +53,6 @@ services:
     networks:
       - back-tier
       - front-tier
-    restart: always
+    # restart: always
+    depends_on:
+      - database
