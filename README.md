@@ -31,6 +31,10 @@ This setup is ideal for scenarios where you need: 1. Persistent data storage (Po
 
 By combining these services, you create a powerful monitoring system that can track, analyze, and visualize your application's performance and data in real-time.
 
+Prefect is a workflow management system that automates and simplifies complex data pipelines.
+
+Prefect organizes tasks into flows, streamlining the orchestration of complex processes like monitoring ML models for data drift. This ensures proper execution sequence and timing of each step in the workflow.
+
 ---
 
 ├── taxi_monitoring

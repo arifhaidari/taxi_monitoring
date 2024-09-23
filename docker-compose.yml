@@ -73,6 +73,7 @@ services:
       - grafana
     ports:
       - "8000:8000"
+      - "4200:4200"   # expose the Prefect server
     networks:
       - back-tier
     environment:
