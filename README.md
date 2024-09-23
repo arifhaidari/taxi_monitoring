@@ -86,7 +86,7 @@ These services work together to create a powerful real-time monitoring system th
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/arifhaidari/taxi_monitoring.git
    cd your-repo-name
    ```
 2. **Build and run the services using Docker**:
@@ -131,7 +131,3 @@ By combining Prefect and Evidently, this project demonstrates how to maintain he
 ## **License**
 
 This project is developed under the supervision of the DataScientest Bootcamp.
-
----
-
-This README offers a clear, structured, and informative guide for users to understand the project and its components.
