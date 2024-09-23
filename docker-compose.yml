@@ -66,7 +66,7 @@ services:
     volumes:
       # - ./data:/app/backend_artifacts  # Mount the data directory (it does not show the directory - 
       # in the host machine but inside the docker)
-      - ./:/app
+      - ./:/app # this one store the information in host machine - current directory or / directory
       # - ./app:/app  # Mounting the entire /app directory to the host machine
     depends_on:
       - database
@@ -74,6 +74,7 @@ services:
     ports:
       - "8000:8000"
       - "4200:4200"   # expose the Prefect server
+      - "8001:8001"   # expose the Evidently server
     networks:
       - back-tier
     environment:
